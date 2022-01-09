@@ -14,6 +14,7 @@ const Header = ({ title }: { title: string }) => (
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         </Head>
         <header>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -33,8 +34,8 @@ const Header = ({ title }: { title: string }) => (
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link href="/about">
-                                        <a className="nav-link" aria-current="page">About</a>
+                                    <Link href="/projects">
+                                        <a className="nav-link" aria-current="page">Projects</a>
                                     </Link>
                                 </li>
                                 <li className="nav-item">
