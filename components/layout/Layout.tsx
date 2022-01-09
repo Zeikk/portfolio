@@ -8,6 +8,8 @@ const Layout = ({ children, title = 'Portfolio' }: { children: ReactNode, title:
     {children}
     <Footer/>
   </div>
+  
 )
+
 
 export default Layout

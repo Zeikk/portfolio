@@ -1,0 +1,58 @@
+.intro {
+    display: table;
+    margin: auto;
+}
+
+.title {
+    font-weight: 700;
+    color: $titleColor;
+    letter-spacing: 2px;
+    font-size: 36px;
+}
+
+.subtitle {
+    font-weight: 400;
+    color: $subtitleColor;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.job {
+    font-weight: 600;
+    color: $mainColor;
+    display: inline-block;
+    animation: slideUp .7s ease;
+}
+
+.contactBtn {
+    background-color: $mainColor;
+    color: white
+}
+
+.contactBtn:hover {
+    color: $subtitleColor
+}
+
+.img {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.bgImg {
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    right: 0;
+    clip-path: circle(67.4% at 68% 77%);
+    background-color: $mainColor;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
