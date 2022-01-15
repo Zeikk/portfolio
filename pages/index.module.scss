@@ -76,11 +76,51 @@
 
 .borderColor { border-color: $mainColor;}
 
+.card {
+    border-color: $mainColor;
+}
+
 @keyframes slideUp {
     0% {
         transform: translateY(100%);
     }
     100% {
         transform: translateY(0%);
+    }
+}
+
+@media(max-width:576px){
+
+    .title {
+        margin-top: 5%
+    }
+
+    .imgDiv {
+        display: flex;
+        justify-content: center;
+    }
+
+    .img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .bgImg {
+        width: 250px;
+        height: 250px;
+    }
+
+    .workDiv {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .workTitle {
+        text-align: center;
+        padding: 0 5%;
+    }
+
+    .card {
+        margin: 5%;
     }
 }

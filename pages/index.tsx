@@ -9,7 +9,7 @@ const Home = () => {
         {/* SECTION INTRO */}
         <div className="container">
             <div className="row align-items-center">
-                <div className="col-7">
+                <div className="col-sm-7">
                     <div className={styles.centerDiv}>
                         <div className={styles.title}>
                             <p style={{ margin: 0 }}>Loïck</p>
@@ -26,10 +26,10 @@ const Home = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="col-5">
+                <div className="col-sm-5">
                     <div className={styles.bgImg}>
                     </div>
-                    <div >
+                    <div className={styles.imgDiv}>
                         <img src="../static/images/freelance.svg" className={styles.img} />
                     </div>
                 </div>
@@ -37,8 +37,8 @@ const Home = () => {
         </div>
         {/* SECTION WORK EXPERIENCE */}
         <div className={`row align-items-center bg-light ${styles.workSection}`}>
-            <div className="col-4">
-                <div className={styles.centerDiv}>
+            <div className="col-sm-4">
+                <div className={`${styles.centerDiv} ${styles.workDiv}`}>
                     <p className={styles.workYear}>2 +</p>
                     <div className={styles.workDescription}>
                         <p>Years</p>
@@ -47,12 +47,12 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="col-7">
+            <div className="col-sm-7">
                 <p className={styles.workTitle}>Fullstack developer and IT engineer student, specialized in Cybersecurity and E-payment.</p>
                 <div className="container">
                     <div className="row align-items-center justify-content-evenly">
-                        <div className="col-4">
-                            <div className={`card ${styles.borderColor}`}>
+                        <div className="col-sm-4">
+                            <div className={`card ${styles.card}`}>
                                 <div className="card-body">
                                     <span className="material-icons">
                                         web
@@ -61,8 +61,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-4">
-                            <div className={`card ${styles.borderColor}`}>
+                        <div className="col-sm-4">
+                            <div className={`card ${styles.card}`}>
                                 <div className="card-body">
                                     <span className="material-icons">
                                         code
@@ -71,8 +71,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-4">
-                            <div className={`card ${styles.borderColor}`}>
+                        <div className="col-sm-4">
+                            <div className={`card ${styles.card}`}>
                                 <div className="card-body">
                                     <span className="material-icons">
                                         architecture

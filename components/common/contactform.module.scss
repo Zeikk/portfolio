@@ -30,3 +30,17 @@
     background-color: $mainColor;
     color: white
 }
+
+@media(max-width:576px){
+    .footer {
+        text-align: center;
+    }
+
+    .listLink {
+        display: none;
+    }
+
+    .contactForm {
+        margin-top: 3%;
+    }
+}

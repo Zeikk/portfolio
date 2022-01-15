@@ -10,3 +10,9 @@
 .icon {
     margin-right: 8px;
 }
+
+@media(max-width:576px){
+    .footer {
+        text-align: center;
+    }
+}

@@ -2,13 +2,13 @@ import React from "react";
 import styles from "./footer.module.scss";
 
 const Footer = () => (
-    <footer className="bg-light">
+    <footer className={`bg-light ${styles.footer}`}>
         <hr />
         <div className="row align-items-center justify-content-end" style={{ margin: 0 }}>
-            <div className="col-3">
+            <div className="col-sm-3">
                 <span>Made with <span className={`material-icons ${styles.favoriteIcon}`}>favorite</span></span>
             </div>
-            <div className="col-4">
+            <div className="col-sm-4">
                 <ul className={`list-unstyled ${styles.listLink}`}>
                     <li className="">
                         <a href="mailto:loick.leprevost@gmail.com" className="text-decoration-none">

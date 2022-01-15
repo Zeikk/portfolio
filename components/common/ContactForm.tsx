@@ -31,8 +31,8 @@ const ContactForm = () => {
         })
     };
 
-    return <div className={`row align-items-center justify-content-evenly ${styles.contactSection}`}>
-        <div className="col-4">
+    return <div className="container"><div className={`row align-items-center justify-content-evenly ${styles.contactSection}`}>
+        <div className="col-sm-4">
             <div className={styles.centerDiv}>
                 <p className={styles.contactTitle}>Let's Connect</p>
                 <p className={styles.contactSubtitle}>Let's talk together to find a solution for your project</p>
@@ -54,7 +54,7 @@ const ContactForm = () => {
                 </ul>
             </div>
         </div>
-        <div className="col-4">
+        <div className={`col-sm-4 ${styles.contactForm}`}>
             <p>Let me a message</p>
             <form>
                 <div className="form-floating mb-3">
@@ -73,6 +73,7 @@ const ContactForm = () => {
                 <button type="submit" className={`btn ${styles.contactBtn}`} onClick={(e) => handleSubmit(e)}>Submit</button>
             </form>
         </div>
+    </div>
     </div>
 }
 
