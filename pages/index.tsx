@@ -51,7 +51,7 @@ const Home = () => {
                 <p className={styles.workTitle}>Fullstack developer and IT engineer student, specialized in Cybersecurity and E-payment.</p>
                 <div className="container">
                     <div className="row align-items-center justify-content-evenly">
-                        <div className="col-sm-4">
+                        <div className="col-lg-4 col-md-10">
                             <div className={`card ${styles.card}`}>
                                 <div className="card-body">
                                     <span className="material-icons">
@@ -61,7 +61,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-4">
+                        <div className="col-lg-4 col-md-10">
                             <div className={`card ${styles.card}`}>
                                 <div className="card-body">
                                     <span className="material-icons">
@@ -71,7 +71,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-4">
+                        <div className="col-lg-4 col-md-10">
                             <div className={`card ${styles.card}`}>
                                 <div className="card-body">
                                     <span className="material-icons">

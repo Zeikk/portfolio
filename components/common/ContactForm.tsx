@@ -54,7 +54,7 @@ const ContactForm = () => {
                 </ul>
             </div>
         </div>
-        <div className={`col-sm-4 ${styles.contactForm}`}>
+        <div className={`col-lg-4 col-md-6 ${styles.contactForm}`}>
             <p>Let me a message</p>
             <form>
                 <div className="form-floating mb-3">

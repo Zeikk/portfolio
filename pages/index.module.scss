@@ -89,7 +89,13 @@
     }
 }
 
-@media(max-width:576px){
+@media(max-width:960px){
+    .card {
+        margin: 5%;
+    }
+}
+
+@media(max-width:540px){
 
     .title {
         margin-top: 5%
