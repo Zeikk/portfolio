@@ -1,0 +1,51 @@
+.linkBtn {
+    border-radius: 50%;
+    background-color: $mainColor;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    text-decoration: none;
+}
+
+.linkIcon {
+    color: white;
+    font-size: 18px;
+}
+
+.centerDiv {
+    display: table;
+    margin: auto;
+}
+
+.card {
+    background-clip: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.75rem;
+    box-shadow: 10px 5px 5px rgb(71, 71, 71);
+}
+
+.titleCard {
+    color: $titleColor;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.subtitleCard {
+    color: $subtitleColor;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.headerCard {
+    margin-left: 5%;
+}
+
+.img {
+    border-radius: 0.25rem;
+}

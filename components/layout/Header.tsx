@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from './header.module.scss';
 
-const Header = ({ title }: { title: string }) => (
+const Header = ({ title, path }: { title: string, path: string }) => (
     <>
         <Head>
             <title>{title}</title>
@@ -15,6 +15,7 @@ const Header = ({ title }: { title: string }) => (
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+            <link rel="icon" type="image/png" href="../../static/favicon-32x32.png" />
         </Head>
         <header>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -30,17 +31,12 @@ const Header = ({ title }: { title: string }) => (
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
                                     <Link href="/">
-                                        <a className="nav-link active" aria-current="page" >Home</a>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link href="/projects">
-                                        <a className="nav-link" aria-current="page">Projects</a>
+                                        <a className={`nav-link ${path == "/" ? "active" : ""}`} aria-current="page" >Home</a>
                                     </Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link href="/contact">
-                                        <a className="nav-link" aria-current="page">Contact</a>
+                                        <a className={`nav-link ${path == "/contact" ? "active" : ""}`} aria-current="page">Contact</a>
                                     </Link>
                                 </li>
                             </ul>
