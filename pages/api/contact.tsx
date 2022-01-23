@@ -1,5 +1,7 @@
-export default async function (req, res) {
+export default function (req, res) {
     require('dotenv').config()
+
+    console.info("Sending mail...");
 
     const sgMail = require('@sendgrid/mail');
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -15,12 +17,11 @@ export default async function (req, res) {
     sgMail
         .send(msg)
         .then(() => {
-            console.log('Email sent')
+            console.info('Email sent')
             res.status(200);
         })
         .catch((error) => {
-            console.log(error);
-            console.log(error.response);
+            console.error(error);
             res.status(400);
         })
 
