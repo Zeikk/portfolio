@@ -14,16 +14,24 @@ export default function (req, res) {
         html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`,
     }
 
-    sgMail
+    return sgMail
         .send(msg)
         .then(() => {
             console.info('Email sent')
-            res.status(200);
+            res.status(200).end();
         })
         .catch((error) => {
+            
             console.error(error);
-            res.status(400);
+            if (error.response) {
+                // Extract error msg
+                const {message, code, response} = error;
+          
+                // Extract response msg
+                const {headers, body} = response;
+          
+                console.error(body);
+            }
+            res.status(400).end();
         })
-
-    res.end();
 }
