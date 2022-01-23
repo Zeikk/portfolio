@@ -6,8 +6,15 @@ const ContactForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [errorMail, setErrorMail] = useState(false);
+
+    const validMail = (mail) => {
+        return /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(mail);
+    }
 
     const handleSubmit = (e) => {
+
+        console.log("SUBMIT")
         e.preventDefault()
         let data = {
             name,
@@ -15,20 +22,26 @@ const ContactForm = () => {
             message
         }
 
-        fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        }).then((res) => {
-            if (res.status === 200) {
-                setName('')
-                setEmail('')
-                setMessage('')
-            }
-        })
+        if (validMail(email)) {
+
+            fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then((res) => {
+                if (res.status === 200) {
+                    setName('')
+                    setEmail('')
+                    setMessage('')
+                }
+            })
+        } else {
+            setErrorMail(true);
+        }
+
     };
 
     return <div className="container"><div className={`row align-items-center justify-content-evenly ${styles.contactSection}`}>
@@ -56,21 +69,21 @@ const ContactForm = () => {
         </div>
         <div className={`col-lg-4 col-md-6 ${styles.contactForm}`}>
             <p>Let me a message</p>
-            <form>
+            <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="form-floating mb-3">
-                    <input type="text" className="form-control" id="inputName" value={name} onChange={(e) => setName(e.target.value)} />
+                    <input type="text" className="form-control" id="inputName" value={name} onChange={(e) => setName(e.target.value)} required/>
                     <label htmlFor="inputName">Your Name</label>
                 </div>
                 <div className="form-floating mb-3">
-                    <input type="email" className="form-control" id="inputEmail" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input type="email" className={`form-control  ${errorMail && "is-invalid"}`} id="inputEmail" value={email} onChange={(e) => {setEmail(e.target.value); setErrorMail(false)}} required/>
                     <label htmlFor="inputEmail">Your Email</label>
                 </div>
 
                 <div className="form-floating mb-5">
-                    <textarea className="form-control" id="inputProject" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                    <textarea className="form-control" id="inputProject" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
                     <label htmlFor="inputProject">Your Project</label>
                 </div>
-                <button type="submit" className={`btn ${styles.contactBtn}`} onClick={(e) => handleSubmit(e)}>Submit</button>
+                <button type="submit" className={`btn ${styles.contactBtn}`} >Submit</button>
             </form>
         </div>
     </div>
