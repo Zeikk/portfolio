@@ -4,7 +4,7 @@ import ContactForm from "../components/common/ContactForm";
 import styles from "./contact.module.scss";
 
 const Contact = () => {
-    return <Layout title="Portfolio">
+    return <Layout title="Contact me - Loïck LEPRÉVOST">
         {/* SECTION CONTACT */}
         <div className={styles.containerContact}>
         <ContactForm /></div>

@@ -5,7 +5,7 @@ import ContactForm from "../components/common/ContactForm";
 import styles from "./index.module.scss";
 
 const Home = () => {
-    return <Layout title="Portfolio">
+    return <Layout title="Freelance Fullstack Developer - Loïck LEPRÉVOST">
         {/* SECTION INTRO */}
         <div className="container">
             <div className="row align-items-center">
@@ -13,7 +13,7 @@ const Home = () => {
                     <div className={styles.centerDiv}>
                         <div className={styles.title}>
                             <p style={{ margin: 0 }}>Loïck</p>
-                            <p>LEPREVOST</p>
+                            <p>LEPRÉVOST</p>
                         </div>
                         <div className={styles.subtitle}>
                             <p style={{ margin: 0 }}>Freelance <span className={styles.job}>Fullstack Developer</span></p>
@@ -30,7 +30,7 @@ const Home = () => {
                     <div className={styles.bgImg}>
                     </div>
                     <div className={styles.imgDiv}>
-                        <img src="../static/images/freelance.svg" className={styles.img} />
+                        <img src="images/freelance.svg" className={styles.img} />
                     </div>
                 </div>
             </div>
