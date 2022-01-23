@@ -19,7 +19,8 @@ export default async function (req, res) {
             res.status(200);
         })
         .catch((error) => {
-            console.log(error.response.body);
+            console.log(error);
+            console.log(error.response);
             res.status(400);
         })
 
