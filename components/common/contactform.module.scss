@@ -31,6 +31,20 @@
     color: white
 }
 
+.active {
+    display: block !important;
+    animation: fadeIn .7s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @media(max-width:576px){
     .footer {
         text-align: center;

@@ -7,6 +7,7 @@ const ContactForm = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [errorMail, setErrorMail] = useState(false);
+    const [validate, setValidate] = useState(false);
 
     const validMail = (mail) => {
         return /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(mail);
@@ -36,6 +37,11 @@ const ContactForm = () => {
                     setName('')
                     setEmail('')
                     setMessage('')
+                    setValidate(true);
+                    setTimeout(function () {
+                        setValidate(false);
+
+                    }, 5000);
                 }
             })
         } else {
@@ -71,11 +77,11 @@ const ContactForm = () => {
             <p>Let me a message</p>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="form-floating mb-3">
-                    <input type="text" className="form-control" id="inputName" value={name} onChange={(e) => setName(e.target.value)} required/>
+                    <input type="text" className="form-control" id="inputName" value={name} onChange={(e) => setName(e.target.value)} required />
                     <label htmlFor="inputName">Your Name</label>
                 </div>
                 <div className="form-floating mb-3">
-                    <input type="email" className={`form-control  ${errorMail && "is-invalid"}`} id="inputEmail" value={email} onChange={(e) => {setEmail(e.target.value); setErrorMail(false)}} required/>
+                    <input type="email" className={`form-control  ${errorMail && "is-invalid"}`} id="inputEmail" value={email} onChange={(e) => { setEmail(e.target.value); setErrorMail(false) }} required />
                     <label htmlFor="inputEmail">Your Email</label>
                 </div>
 
@@ -86,7 +92,19 @@ const ContactForm = () => {
                 <button type="submit" className={`btn ${styles.contactBtn}`} >Submit</button>
             </form>
         </div>
+
     </div>
+        <div className="position-fixed bottom-0 end-0 p-3" style={{ zIndex: 11 }}>
+            <div id="liveToast" className={`toast bg-success ${validate && styles.active}`} role="alert" aria-live="assertive" aria-atomic="true">
+                <div className="toast-header">
+                    <span className="material-icons">
+                        done
+                    </span>
+                    <strong className="ms-2 me-auto">Mail envoyé</strong>
+                    <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close" onClick={(e) => setValidate(false)}></button>
+                </div>
+            </div>
+        </div>
     </div>
 }
 
