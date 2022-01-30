@@ -7,7 +7,7 @@ const ContactForm = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [errorMail, setErrorMail] = useState(false);
-    const [validate, setValidate] = useState(false);
+    const [validate, setValidate] = useState(0);
 
     const validMail = (mail) => {
         return /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(mail);
@@ -37,10 +37,14 @@ const ContactForm = () => {
                     setName('')
                     setEmail('')
                     setMessage('')
-                    setValidate(true);
+                    setValidate(1);
                     setTimeout(function () {
-                        setValidate(false);
-
+                        setValidate(0);
+                    }, 5000);
+                } else {
+                    setValidate(2);
+                    setTimeout(function () {
+                        setValidate(0);
                     }, 5000);
                 }
             })
@@ -95,13 +99,30 @@ const ContactForm = () => {
 
     </div>
         <div className="position-fixed bottom-0 end-0 p-3" style={{ zIndex: 11 }}>
-            <div id="liveToast" className={`toast bg-success ${validate && styles.active}`} role="alert" aria-live="assertive" aria-atomic="true">
+            <div id="liveToast" className={`toast ${validate == 1 ? "bg-success" : ""} ${validate == 2 ? "bg-danger" : ""} ${validate > 0 && styles.active}`} role="alert" aria-live="assertive" aria-atomic="true">
                 <div className="toast-header">
-                    <span className="material-icons">
-                        done
-                    </span>
-                    <strong className="ms-2 me-auto">Mail envoyé</strong>
-                    <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close" onClick={(e) => setValidate(false)}></button>
+                    {
+                        validate == 1 && (
+                            <>
+                                <span className="material-icons">
+                                    done
+                                </span>
+                                <strong className="ms-2 me-auto">Mail sent</strong>
+                            </>
+                        )
+                    }
+                    {
+                        validate == 2 && (
+                            <>
+                                <span className="material-icons">
+                                    block
+                                </span>
+                                <strong className="ms-2 me-auto">Error occured</strong>
+                            </>
+                        )
+                    }
+
+                    <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close" onClick={(e) => setValidate(0)}></button>
                 </div>
             </div>
         </div>
