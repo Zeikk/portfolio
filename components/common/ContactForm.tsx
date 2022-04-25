@@ -57,8 +57,8 @@ const ContactForm = () => {
     return <div className="container"><div className={`row align-items-center justify-content-evenly ${styles.contactSection}`}>
         <div className="col-sm-4">
             <div className={styles.centerDiv}>
-                <p className={styles.contactTitle}>Let's Connect</p>
-                <p className={styles.contactSubtitle}>Let's talk together to find a solution for your project</p>
+                <p className={styles.contactTitle}>N'hésitez pas</p>
+                <p className={styles.contactSubtitle}>Parlons ensemble et trouvons la solution adéquate pour votre projet</p>
                 <ul className={`list-inline ${styles.listLink}`}>
                     <li className="list-inline-item">
                         <a href="mailto:loick.leprevost@gmail.com" className="text-decoration-none">
@@ -74,26 +74,33 @@ const ContactForm = () => {
                             </svg>
                         </a>
                     </li>
+                    <li className="list-inline-item">
+                        <a href="https://github.com/Zeikk" className="text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                            </svg>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
         <div className={`col-lg-4 col-md-6 ${styles.contactForm}`}>
-            <p>Let me a message</p>
+            <p>Laissez-moi un message</p>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="form-floating mb-3">
                     <input type="text" className="form-control" id="inputName" value={name} onChange={(e) => setName(e.target.value)} required />
-                    <label htmlFor="inputName">Your Name</label>
+                    <label htmlFor="inputName">Votre Nom</label>
                 </div>
                 <div className="form-floating mb-3">
                     <input type="email" className={`form-control  ${errorMail && "is-invalid"}`} id="inputEmail" value={email} onChange={(e) => { setEmail(e.target.value); setErrorMail(false) }} required />
-                    <label htmlFor="inputEmail">Your Email</label>
+                    <label htmlFor="inputEmail">Votre Mail</label>
                 </div>
 
                 <div className="form-floating mb-5">
                     <textarea className="form-control" id="inputProject" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
-                    <label htmlFor="inputProject">Your Project</label>
+                    <label htmlFor="inputProject">Votre Projet</label>
                 </div>
-                <button type="submit" className={`btn ${styles.contactBtn}`} >Submit</button>
+                <button type="submit" className={`btn ${styles.contactBtn}`} >Envoyer</button>
             </form>
         </div>
 
@@ -107,7 +114,7 @@ const ContactForm = () => {
                                 <span className="material-icons">
                                     done
                                 </span>
-                                <strong className="ms-2 me-auto">Mail sent</strong>
+                                <strong className="ms-2 me-auto">Mail envoyé</strong>
                             </>
                         )
                     }
@@ -117,7 +124,7 @@ const ContactForm = () => {
                                 <span className="material-icons">
                                     block
                                 </span>
-                                <strong className="ms-2 me-auto">Error occured</strong>
+                                <strong className="ms-2 me-auto">Une erreur est survenue</strong>
                             </>
                         )
                     }

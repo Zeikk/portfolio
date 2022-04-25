@@ -16,12 +16,12 @@ const Home = () => {
                             <p>LEPRÉVOST</p>
                         </div>
                         <div className={styles.subtitle}>
-                            <p style={{ margin: 0 }}>Freelance <span className={styles.job}>Fullstack Developer</span></p>
-                            <p>Based in France</p>
+                            <p style={{ margin: 0 }}>Freelance <span className={styles.job}>Fullstack Développeur</span></p>
+                            <p>Basé en France</p>
                         </div>
                         <Link href="/contact">
                             <button type="button" className={`btn ${styles.contactBtn}`}>
-                                Contact Me
+                                Contactez-moi
                             </button>
                         </Link>
                     </div>
@@ -41,14 +41,18 @@ const Home = () => {
                 <div className={`${styles.centerDiv} ${styles.workDiv}`}>
                     <p className={styles.workYear}>2 +</p>
                     <div className={styles.workDescription}>
-                        <p>Years</p>
-                        <p>Experience</p>
-                        <p>Working</p>
+                        <p>Années</p>
+                        <p>d'Expérience</p>
+                        <p>Professionnelle</p>
                     </div>
                 </div>
             </div>
             <div className="col-sm-7">
-                <p className={styles.workTitle}>Fullstack developer and IT engineer student, specialized in Cybersecurity and E-payment.</p>
+                <div className={styles.workTitle}>
+                    <p>Fullstack développeur</p>
+                    <p>Apprenti Ingénieur en Informatique, spécialisé en Cybersécurité et E-Paiement.</p>
+                </div>
+                
                 <div className="container">
                     <div className="row align-items-center justify-content-evenly">
                         <div className="col-lg-4 col-md-10">
@@ -57,7 +61,7 @@ const Home = () => {
                                     <span className="material-icons">
                                         web
                                     </span>
-                                    <h5 className="card-title">Fullstack developer</h5>
+                                    <h5 className="card-title">Fullstack Développeur</h5>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +71,7 @@ const Home = () => {
                                     <span className="material-icons">
                                         code
                                     </span>
-                                    <h5 className="card-title">Software developer</h5>
+                                    <h5 className="card-title">Développeur Logiciel</h5>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +81,7 @@ const Home = () => {
                                     <span className="material-icons">
                                         architecture
                                     </span>
-                                    <h5 className="card-title">Software Architect</h5>
+                                    <h5 className="card-title">Architecte Logiciel</h5>
                                 </div>
                             </div>
                         </div>

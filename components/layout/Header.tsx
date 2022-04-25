@@ -32,7 +32,7 @@ const Header = ({ title, path }: { title: string, path: string }) => (
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
                                     <Link href="/">
-                                        <a className={`nav-link ${path == "/" ? "active" : ""}`} aria-current="page" >Home</a>
+                                        <a className={`nav-link ${path == "/" ? "active" : ""}`} aria-current="page" >Accueil</a>
                                     </Link>
                                 </li>
                                 <li className="nav-item">
