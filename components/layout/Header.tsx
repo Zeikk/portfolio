@@ -8,7 +8,7 @@ const Header = ({ title, path }: { title: string, path: string }) => (
         <Head>
             <title>{title}</title>
             <meta charSet="utf-8" />
-            <meta name="description" content="Hello, I'm Loïck LEPRÉVOST a Freelance Fullstack developer. Contact me to develop your website."/>
+            <meta name="description" content="Bonjour, Je suis Loïck LEPRÉVOST, Freelance Fullstack Développeur. Contactez-moi pour développer votre projetContact me to develop your website."/>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossOrigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossOrigin="anonymous" />

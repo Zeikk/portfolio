@@ -5,7 +5,7 @@ import ContactForm from "../components/common/ContactForm";
 import styles from "./index.module.scss";
 
 const Home = () => {
-    return <Layout title="Freelance Fullstack Developer - Loïck LEPRÉVOST">
+    return <Layout title="Freelance Fullstack Développeur - Loïck LEPRÉVOST">
         {/* SECTION INTRO */}
         <div className="container">
             <div className="row align-items-center">
