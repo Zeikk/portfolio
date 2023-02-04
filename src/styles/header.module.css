@@ -1,0 +1,17 @@
+.title {
+    @apply text-main;
+    @apply font-bold;
+    @apply text-xl;
+}
+
+.link {
+    font-size: 16px;
+    @apply leading-6;
+    color: #757576;
+    @apply font-medium;
+}
+
+.active {
+    color: #1e1e1f;
+    @apply font-semibold;
+}
