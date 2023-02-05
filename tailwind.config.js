@@ -7,11 +7,16 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      main: "#00846f",
-      title: "#100743",
-      subtitle: "#a5a2b3"
+    extend: {
+      colors: {
+        main: "#00846f",
+        title: "#100743",
+        subtitle: "#a5a2b3"
+      }
     }
+
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }

@@ -1,0 +1,9 @@
+.submitButton {
+    @apply bg-main;
+    @apply rounded;
+    @apply p-2.5;
+    color: white;
+    @apply font-semibold;
+    @apply tracking-wide;
+    @apply text-base;
+}

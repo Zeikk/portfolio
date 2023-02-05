@@ -16,7 +16,6 @@
     font-weight: 600;
     @apply text-main;
     display: inline-block;
-    animation: slideUp 0.7s ease;
 }
 
 .img {
@@ -32,15 +31,6 @@
     right: 0;
     clip-path: circle(67.4% at 68% 77%);
     @apply bg-main;
-}
-
-@keyframes slideUp {
-    0% {
-        transform: translateY(100%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
 }
 
 .workSection {
@@ -64,4 +54,21 @@
     @apply font-bold;
     @apply text-xl;
     margin-bottom: 5%;
+}
+
+.contactTitle {
+    @apply text-title;
+    @apply text-3xl;
+    @apply font-bold;
+}
+
+.contactSubtitle {
+    @apply text-subtitle;
+    letter-spacing: 1px;
+    @apply text-sm;
+    @apply font-medium;
+}
+
+.listIcons {
+    color: grey;
 }

@@ -30,7 +30,7 @@ const Header = ({ title }: { title: string }) => {
                         <Link href="/" className={`${styles.link} ${actif == '/' || actif == '' ? styles.active : ''}`}>
                             Accueil
                         </Link>
-                        <Link href="/#contact" className={`${styles.link} ${actif == '/#contact' ? styles.active : ""}`}>
+                        <Link href="/#contact" scroll={false} className={`${styles.link} ${actif == '/#contact' ? styles.active : ""}`}>
                             Contact
                         </Link>
                     </div>
