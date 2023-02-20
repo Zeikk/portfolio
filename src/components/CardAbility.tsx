@@ -5,7 +5,7 @@ import styles from "@/styles/cardAbility.module.css";
 const CardAbility = ({ iconPath, ability }: { iconPath: string, ability: string }) => {
 
     return (
-        <div className={`${styles.card}`} data-aos="fade-up" data-aos-duration="1000">
+        <div className={`${styles.card}`} data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
             <Image
                 src={iconPath}
                 alt="icon"

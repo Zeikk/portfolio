@@ -23,7 +23,7 @@ export default function (req: NextApiRequest, res: NextApiResponse) {
       console.info('Email sent')
       res.status(200).end();
     })
-    .catch((error) => {
+    .catch((error: { response: any; }) => {
 
       console.error(error);
       if (error.response) {

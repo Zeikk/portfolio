@@ -3,19 +3,28 @@ import styles from '@/styles/index.module.css';
 import Link from 'next/link';
 import CardAbility from '../components/CardAbility';
 import ContactForm from '../components/ContactForm';
+import Toast from "../components/Toast";
+import { useState } from 'react';
 
 const Home = () => {
+
+    const [toasts, setToasts] = useState<string[]>([])
+
+    const triggerToast = (severity: string): void => {
+        setToasts([...toasts, severity])
+    }
+
     return (
         <>
             {/* SECTION INTRO */}
-            <section className={`container my-5 bg-white`}>
-                <div className="mx-32">
+            <section className={`container flex-col md:flex-row bg-white`}>
+                <div className="mx-10 md:mx-32">
                     <div className={`my-2 ${styles.title}`}>
                         <p>Loïck</p>
                         <p>LEPRÉVOST</p>
                     </div>
                     <div className={styles.subtitle}>
-                        <p className='m-0'>Freelance <span className={styles.job} data-aos="fade-up" data-aos-duration="1000">Fullstack Développeur</span></p>
+                        <p className='m-0'>Freelance <span className={styles.job} data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Fullstack Développeur</span></p>
                         <p>Basé en France</p>
                     </div>
                     <Link href="/#contact">
@@ -31,15 +40,15 @@ const Home = () => {
                         src="images/freelance.svg"
                         alt="Developer picture"
                         className={styles.img}
-                        width="300"
-                        height="300"
+                        width="30"
+                        height="30"
                     />
                 </div>
             </section>
             {/* SECTION WORK EXPERIENCE */}
-            <section className={`flex justify-around ${styles.workSection}`}>
-                <div className='w-1/3'>
-                    <div className={`text-center`}>
+            <section className={`md:flex justify-around ${styles.workSection}`}>
+                <div className='md:w-1/3'>
+                    <div className={`text-center flex justify-evenly md:block`}>
                         <p className={styles.workYear}>{new Date().getFullYear() - 2020} +</p>
                         <div className={`my-4 ${styles.workDescription}`}>
                             <p>Années</p>
@@ -48,12 +57,12 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-2/3'>
-                    <div className={styles.workTitle}>
+                <div className='md:w-2/3'>
+                    <div className={`text-center md:text-left ${styles.workTitle}`}>
                         <p>Fullstack développeur</p>
                         <p className="my-2">Apprenti Ingénieur en Informatique, spécialisé en Cybersécurité et E-Paiement.</p>
                     </div>
-                    <div className="px-8 grid grid-cols-3 gap-8">
+                    <div className="px-8 grid grid-rows-3 md:grid-rows-none md:grid-cols-3 gap-8 mx-2 md:mx-0">
                         <CardAbility
                             iconPath="images/web-icon.svg"
                             ability="ReactJS"
@@ -70,8 +79,8 @@ const Home = () => {
                 </div>
             </section>
             {/* SECTION CONTACT */}
-            <section id="contact" className={`container justify-evenly items-center py-12 bg-white`}>
-                <div className="w-1/4">
+            <section id="contact" className={`container flex-col md:flex-row justify-evenly items-center py-12 bg-white`}>
+                <div className="mx-10 md:w-1/4">
                     <p className={`my-5 ${styles.contactTitle}`}>N'hésitez pas</p>
                     <p className={`my-2 ${styles.contactSubtitle}`}>Parlons ensemble et trouvons la solution adéquate pour votre projet</p>
                     <ul className={`flex justify-between w-20 my-4 ${styles.listIcons}`}>
@@ -98,10 +107,14 @@ const Home = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="w-1/4">
-                    <ContactForm />
+                <div className="mx-10 md:w-1/4">
+                    <ContactForm triggerToast={triggerToast} />
                 </div>
             </section>
+            <section className={`container flex justify-center`}>
+                {toasts.map((severity) => <Toast severity={severity} />)}
+            </section>
+
         </>
     )
 }
