@@ -52,7 +52,7 @@ const Home = () => {
                         <p className={styles.workYear}>{new Date().getFullYear() - 2020} +</p>
                         <div className={`my-4 ${styles.workDescription}`}>
                             <p>Années</p>
-                            <p>d'Expérience</p>
+                            <p>d&aposExpérience</p>
                             <p>Professionnelle</p>
                         </div>
                     </div>
@@ -81,7 +81,7 @@ const Home = () => {
             {/* SECTION CONTACT */}
             <section id="contact" className={`container flex-col md:flex-row justify-evenly items-center py-12 bg-white`}>
                 <div className="mx-10 md:w-1/4">
-                    <p className={`my-5 ${styles.contactTitle}`}>N'hésitez pas</p>
+                    <p className={`my-5 ${styles.contactTitle}`}>N&aposhésitez pas</p>
                     <p className={`my-2 ${styles.contactSubtitle}`}>Parlons ensemble et trouvons la solution adéquate pour votre projet</p>
                     <ul className={`flex justify-between w-20 my-4 ${styles.listIcons}`}>
                         <li className="list-inline-item">
@@ -112,7 +112,7 @@ const Home = () => {
                 </div>
             </section>
             <section className={`container flex justify-center`}>
-                {toasts.map((severity) => <Toast severity={severity} />)}
+                {toasts.map((severity, index) => <Toast key={index} severity={severity} />)}
             </section>
 
         </>
