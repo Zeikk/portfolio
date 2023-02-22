@@ -1,0 +1,87 @@
+.title {
+    font-weight: 700;
+    @apply text-title;
+    letter-spacing: 2px;
+    font-size: 36px;
+}
+
+.subtitle {
+    @apply font-medium;
+    @apply text-subtitle;
+    letter-spacing: 1px;
+    @apply text-base;
+}
+
+.job {
+    font-weight: 600;
+    @apply text-main;
+    display: inline-block;
+}
+
+.img {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.bgImg {
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    right: 0;
+    clip-path: circle(67.4% at 68% 77%);
+    @apply bg-main;
+}
+
+.workSection {
+    padding: 5% 0;
+    margin: 0;
+    @apply text-title;
+}
+
+.workYear {
+    @apply text-main;
+    font-size: 56px;
+    @apply font-bold;
+}
+
+.workDescription {
+    @apply font-semibold;
+    @apply text-lg;
+}
+
+.workTitle {
+    @apply font-bold;
+    @apply text-xl;
+    margin-bottom: 5%;
+}
+
+.contactTitle {
+    @apply text-title;
+    @apply text-3xl;
+    @apply font-bold;
+}
+
+.contactSubtitle {
+    @apply text-subtitle;
+    letter-spacing: 1px;
+    @apply text-sm;
+    @apply font-medium;
+}
+
+.listIcons {
+    color: grey;
+}
+
+@media only screen and (max-width: 768px) {
+    .img {
+        width: 250px;
+        height: 250px;
+        margin: auto;
+    }
+    
+    .bgImg {
+        width: 250px;
+        height: 250px;
+    }
+}

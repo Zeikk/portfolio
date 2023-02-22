@@ -1,6 +1,6 @@
-module.exports = {
-    distDir: 'build',
-    sassOptions: {
-      prependData: `@import "global.scss";`
-    }
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
 }
+
+module.exports = nextConfig

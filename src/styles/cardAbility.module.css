@@ -1,0 +1,12 @@
+.card {
+    @apply rounded;
+    @apply border-main;
+    @apply border;
+    @apply p-4;
+    background-color: white;
+}
+
+.cardTitle {
+    @apply font-medium;
+    @apply text-xl;
+}
