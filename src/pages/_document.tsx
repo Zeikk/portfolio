@@ -8,7 +8,7 @@ export default function Document() {
         <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
       </Head>
       <body>
-        <Script src="../../node_modules/flowbite/dist/flowbite.min.js"></Script >
+        <Script src="../../node_modules/flowbite/dist/flowbite.min.js"></Script>
         <Main />
         <NextScript />
       </body>
