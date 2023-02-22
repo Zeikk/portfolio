@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "@/styles/footer.module.css";
-import Image from 'next/image'
 
 const Footer = () => (
     <footer className={``}>

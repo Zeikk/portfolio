@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import Layout from '../components/Layout.tsx';
+import Layout from '../components/Layout';
 import type { AppProps } from 'next/app'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -11,5 +11,5 @@ export default function App({ Component, pageProps }: AppProps) {
     AOS.init();
   }, [])
 
-  return <Layout><Component {...pageProps} /></Layout>
+  return <Layout title="Portfolio - Loïck LEPREVOST"><Component {...pageProps} /></Layout>
 }
