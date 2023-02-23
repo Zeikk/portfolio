@@ -40,6 +40,8 @@ const ContactForm = ({ triggerToast }: { triggerToast: (severity: string) => voi
                     setEmail('')
                     setMessage('')
                     triggerToast("success")
+                } else {
+                    triggerToast("error")
                 }
                 setLoading(false)
 
