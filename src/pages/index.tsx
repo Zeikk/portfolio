@@ -24,7 +24,7 @@ const Home = () => {
                         <p>LEPRÉVOST</p>
                     </div>
                     <div className={styles.subtitle}>
-                        <p className='m-0'>Freelance <span className={styles.job} data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Fullstack Développeur</span></p>
+                        <p className='m-0'>Freelance <span className={styles.job} data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Data Engineer</span></p>
                         <p>Basé en France</p>
                     </div>
                     <Link href="/#contact">
@@ -59,10 +59,14 @@ const Home = () => {
                 </div>
                 <div className='md:w-2/3'>
                     <div className={`text-center md:text-left ${styles.workTitle}`}>
-                        <p>Fullstack développeur</p>
+                        <p>Data Engineer et Fullstack Développeur</p>
                         <p className="my-2">Apprenti Ingénieur en Informatique, spécialisé en Cybersécurité et E-Paiement.</p>
                     </div>
                     <div className="px-8 grid grid-rows-3 md:grid-rows-none md:grid-cols-3 gap-8 mx-2 md:mx-0">
+                        <CardAbility
+                            iconPath="images/query-icon.svg"
+                            ability="Python / Pandas"
+                        />
                         <CardAbility
                             iconPath="images/web-icon.svg"
                             ability="ReactJS"
@@ -70,10 +74,6 @@ const Home = () => {
                         <CardAbility
                             iconPath="images/code-icon.svg"
                             ability="NodeJS"
-                        />
-                        <CardAbility
-                            iconPath="images/query-icon.svg"
-                            ability="Python / Pandas"
                         />
                     </div>
                 </div>
@@ -83,7 +83,7 @@ const Home = () => {
                 <div className="mx-10 md:w-1/4">
                     <p className={`my-5 ${styles.contactTitle}`}>N&apos;hésitez pas</p>
                     <p className={`my-2 ${styles.contactSubtitle}`}>Parlons ensemble et trouvons la solution adéquate pour votre projet</p>
-                    <ul className={`flex justify-between w-20 my-4 ${styles.listIcons}`}>
+                    <ul className={`flex justify-between w-32 my-4 ${styles.listIcons}`}>
                         <li className="list-inline-item">
                             <a href="mailto:loick.leprevost@gmail.com" className="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-envelope" viewBox="0 0 16 16">
@@ -103,6 +103,16 @@ const Home = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
                                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                 </svg>
+                            </a>
+                        </li>
+                        <li className="list-inline-item">
+                            <a href="https://www.malt.fr/profile/loickleprevost" className="text-decoration-none">
+                                <Image
+                                    src="/images/malt-icon.png"
+                                    alt="Icon Malt"
+                                    width="20"
+                                    height="20"
+                                />
                             </a>
                         </li>
                     </ul>
